@@ -1,0 +1,15 @@
+[workspace]
+members = ["tlv-derive"]
+
+[package]
+name = "tlv"
+version = "0.0.1"
+authors = ["Velnbur <kyrylo.baybula@distributedlab.com>"]
+edition = "2021"
+
+[features]
+default = ["derive"]
+derive = [ "dep:tlv-derive" ]
+
+[dependencies]
+tlv-derive = { path = "./tlv-derive", optional = true }
